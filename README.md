@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/w8942s56uhlakmq4?svg=true)](https://ci.appveyor.com/project/Klimenko-E/autotesting-2-2-selenide)

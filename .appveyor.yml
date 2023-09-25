@@ -1,0 +1,17 @@
+image: Ubuntu2004
+
+stack: jdk 11 K
+
+branches:
+  only:
+    - main  # ветка git
+
+build: off  # будем использовать свой скрипт сборки
+
+install:
+  # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
+  - java -jar ./app-card-delivery.jar &
+
+build_script:
+  - chmod +x gradlew
+  - ./gradlew test --info -Dselenide.headless=true
